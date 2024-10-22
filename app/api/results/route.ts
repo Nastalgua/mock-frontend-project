@@ -46,7 +46,7 @@ const searchByTitleAcrossPages = (searchString: string): TResult[] => {
   return results;
 };
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest) {
   const page = req.nextUrl.searchParams.get('page');
   const search = req.nextUrl.searchParams.get('search') || '';
 
